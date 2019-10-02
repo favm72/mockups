@@ -1,0 +1,22 @@
+textarea {
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+.filtros {
+    display: flex;    
+}
+.filtros > article {
+    padding: 1rem;
+}
+.detalle {
+    display: flex;
+}
+.detalle > section {
+    padding: 1rem;
+    display:flex; 
+    flex-direction: column
+}
+
+.detalle > section > label,
+.detalle > section > button{
+    margin-bottom: 1rem;
+}

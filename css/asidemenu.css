@@ -1,7 +1,8 @@
 .menu {
    width: 300px;
    height: 100vh;
-   background-color: midnightblue; 
+   background-color: midnightblue;
+   padding: 1rem; 
 }
 
 .menu > header {
@@ -9,15 +10,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .menu > section > article {
     height: 3rem;
-    padding: 5px;
-    border-radius: 7%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
     background-color: rgba(0,0,0,0.5);
-    margin-bottom: 5px;
-    color: white;    
+    margin-bottom: 0.5rem;
+    color: white;
+    padding-left: 10px;
 }
 .menu > section > article:hover {
     color: black;
@@ -36,4 +40,10 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
+}
+section.main {
+    padding: 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+    flex: 1fr;
 }

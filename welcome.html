@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/asidemenu.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/loading.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div class="loading" style="display: none">Loading&#8230;</div>
     <aside class="menu">
         <header>
             <img class="bg-image" src="https://nightwing.stevivor.com/wp-content/uploads/2016/07/S-blue.png" alt="#">
             <span>Real Systems</span>
         </header>
         <section>
-            <article>
-                <a href="requerimientos.html">Requerimientos</a>
+            <article onclick="open_view('requerimientos.html', load_requerimientos);">
+                Requerimientos
             </article>
-            <article>
-                <a href="modelos.html">Modelos</a>
+            <article onclick="open_view('modelos.html');">
+                Modelos
             </article>
-            <article>
-                <a href="requerimientos.html">Reportes</a>
+            <article onclick="open_view('reportes.html');">
+                Reportes
             </article>
         </section>
         <footer></footer>
     </aside>
-    <section>
-        <header>
-
-        </header>
+    <section class="main">
+       
     </section>
+    <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="RegisterModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registrar Requerimiento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="empresa">Empresa</label>
+                    <select name="new_cliente" id="new_cliente" class="form-control"></select>                   
+                    <label for="formateador"></label>
+                    <label>Formateador</label>
+                    <select name="new_formateador" id="new_formateador" class="form-control"></select>
+                    <label>Tipos de Documento</label>
+                    <select name="new_tipodoc" id="new_tipo" class="form-control"></select>
+                    <label>Comentario</label>
+                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="registrar();">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

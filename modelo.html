@@ -1,0 +1,25 @@
+<div class="detalle">
+    <section style="display:flex; flex-direction: column">
+        <input type="hidden" id="hdf_id" value="0">
+        <label for="">Cliente</label>
+        <input type="text" disabled id="txt_cliente" class="form-control">
+        <label for="">RUC</label>
+        <input type="text" disabled id="txt_ruc" class="form-control">
+        <label for="">Tipo</label>
+        <input type="text" disabled id="txt_tipo" class="form-control">
+        <label for="">Fecha</label>
+        <input type="text" disabled id="txt_fecha" class="form-control">
+    </section>
+   
+    <section style="display:flex; flex-direction: column">
+        <label>
+            <input type="file" id="uploader" style="display: none" />
+            <input type="button" class="btn btn-secondary" value="Cargar Imagen" onclick="load_image(this);" />
+        </label>
+        <button onclick="procesar();" class="btn btn-primary">Procesar Imagen</button>
+        <button onclick="generar();" class="btn btn-secondary">Generar Scripts</button>
+    </section>
+    <section>        
+        <textarea id="txt_result" name="" id="" cols="62" rows="10"></textarea>
+    </section>
+</div>
